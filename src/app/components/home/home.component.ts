@@ -38,12 +38,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   getCategory(category: string) {
-    console.log(category, 'CATEGORY');
     this.subscribe.add(
       this._service.getProducts(category).subscribe({
         next: (res) => {
           this.fruits = res
-          this._toastr.success('Item added to cart successfully', 'Success');
         },
         error: (err) => {
           this._toastr.error('Something went wrong', err.error.message);
@@ -71,6 +69,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         this._service.addToCard(f_id).subscribe({
           next: (res) => {
             this._toastr.success('Item added to cart successfully', 'Success');
+            alert('Item added to cart successfully')
           },
           error: (err) => {
             this._toastr.error('Something went wrong', err.error.message)
@@ -81,6 +80,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       const item = { f_id, quantity, price }
       this._cartService.addToCart(item)
       this._toastr.success('Item added to cart successfully', 'Success');
+      alert('Item added to cart successfully')
     }
   }
 

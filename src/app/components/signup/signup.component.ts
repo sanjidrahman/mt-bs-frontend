@@ -47,6 +47,7 @@ export class SignupComponent implements OnInit, OnDestroy {
           },
           error: (err) => {
             console.log(err.error.message);
+            alert(err.error.message)
           }
         })
       )

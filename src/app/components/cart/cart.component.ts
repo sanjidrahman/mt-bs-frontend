@@ -103,6 +103,7 @@ export class CartComponent implements OnInit, OnDestroy {
           next: () => {
             this._toastr.success('Product deleted Successfully');
             this.loadDetails()
+            alert('Selected item deleted successfully..!')
           },
           error: (err) => {
             console.log(err);
@@ -112,6 +113,7 @@ export class CartComponent implements OnInit, OnDestroy {
     } else {
       this._cartService.removeFromCart(f_id)
       this.loadDetails()
+      alert('Selected item deleted successfully..!')
     }
   }
 
