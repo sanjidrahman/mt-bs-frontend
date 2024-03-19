@@ -19,7 +19,7 @@
                     <tr *ngFor="let item of localStorageCartData;let i=index">
                         <th scope="row">
                             <div class="d-flex align-items-center">
-                                <img [src]="'http://localhost:3030/file/images/'+ item.image"
+                                <img [src]="'https://mt-backend-b58v.onrender.com/file/images/'+ item.image"
                                     class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="">
                             </div>
                         </th>
@@ -95,7 +95,7 @@
                     <tr *ngFor="let item of backendCartData;let i=index">
                         <th scope="row">
                             <div class="d-flex align-items-center">
-                                <img [src]="'http://localhost:3030/file/images/'+ item.productId.image"
+                                <img [src]="'https://mt-backend-b58v.onrender.com/file/images/'+ item.productId.image"
                                     class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="">
                             </div>
                         </th>
